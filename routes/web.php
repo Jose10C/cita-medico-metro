@@ -44,7 +44,10 @@ Route::middleware('auth', 'medico')->group(function () {
 Route::middleware('auth')->group(function() {
     Route::get('/reservarcitas/create', [App\Http\Controllers\Paciente\CitaController::class,'create'])->name('create-cita');
     Route::post('/reservarcitas', [App\Http\Controllers\Paciente\CitaController::class,'store'])->name('store-cita');
-    Route::post('/miscitas', [App\Http\Controllers\Paciente\CitaController::class,'index'])->name('mis-citas');
+    Route::get('/miscitas', [App\Http\Controllers\Paciente\CitaController::class,'index'])->name('mis-citas');
+    Route::get('/miscitas/{cita}', [App\Http\Controllers\Paciente\CitaController::class,'show'])->name('cita-show');
+    Route::post('/miscitas/cancelar/{cita}', [App\Http\Controllers\Paciente\CitaController::class,'cancel'])->name('cancelar-cita');
+    Route::get('/miscitas/cancelar/{cita}', [App\Http\Controllers\Paciente\CitaController::class,'confirm'])->name('confirmar-cancelar-cita');
     
     Route::get('/especialidades/{especialidad}/medicos', [App\Http\Controllers\Api\EspecialidadController::class,'medicos'])->name('especialidades.medicos');
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Paciente;
 
 use App\Http\Controllers\Controller;
 use App\Interfaces\HorarioServiceInterface;
+use App\Models\CitaCancelada;
 use App\Models\Citas;
 use App\Models\Especialidad;
 use Carbon\Carbon;
@@ -12,6 +13,23 @@ use Illuminate\Support\Facades\Validator;
 
 class CitaController extends Controller
 {
+    public function index()
+    {
+        $citasConfirmadas = Citas::all()
+        ->where('estado','Confirmada')
+        ->where('paciente_id',auth()->id());
+        
+        $citasPendientes = Citas::all()
+        ->where('estado','Reservada')
+        ->where('paciente_id',auth()->id());
+
+        $citasHistorial = Citas::all()
+        ->whereIn('estado',['Atendida','Cancelada'])
+        ->where('paciente_id',auth()->id());
+
+        return view('cita.index', ['citasConfirmadas' => $citasConfirmadas, 'citasPendientes' => $citasPendientes, 'citasHistorial' => $citasHistorial]);
+    }
+
     public function create(HorarioServiceInterface $horarioServiceInterface)
     {
         $especialidades = Especialidad::all();
@@ -101,8 +119,31 @@ class CitaController extends Controller
         return back()->with('message', 'Su cita se ha registrado correctamente.');
     }
 
-    public function index()
+    public function cancel(Citas $cita, Request $request)
     {
-        //
+        if($request->has('motivo')){
+            $cancelacion = new CitaCancelada();
+            $cancelacion->motivo = $request->input('motivo');
+            $cancelacion->cancelado_por_id = auth()->id();
+            $cita->cancelacion()->save($cancelacion);
+        }
+        $cita->estado = 'Cancelada';
+        $cita->save();
+
+        return redirect('mis-citas')->with('message', 'Su cita se ha cancelado correctamente.');
+    }
+
+    public function confirm(Citas $cita)
+    {
+        if($cita->estado == 'Confirmada'){
+            return view('cita.cancelar-cita', ['cita' => $cita]);
+        }
+
+        return redirect('mis-citas');
+    }
+
+    public function show(Citas $cita)
+    {
+        return view('cita.show', ['cita' => $cita]);
     }
 }

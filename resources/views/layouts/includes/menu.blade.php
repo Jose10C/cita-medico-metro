@@ -37,7 +37,7 @@
             @endif
             @if(Auth()->user()->rol == 'paciente')
             <li><a class="nav-link" href="{{ route('create-cita') }}"><i class="far fa-square"></i> <span>Reservar Cita</span></a></li>
-            <li><a class="nav-link" href="{{ route('store-cita') }}"><i class="far fa-square"></i> <span>Mis Citas</span></a></li>
+            <li><a class="nav-link" href="{{ route('mis-citas') }}"><i class="far fa-square"></i> <span>Mis Citas</span></a></li>
             @endif
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
