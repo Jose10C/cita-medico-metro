@@ -15,7 +15,7 @@
         </tr>
         @foreach ($citasPendientes as $cita)
         <tr>
-            <td>{{$cita->sintomas}}</td>
+            <td>{{$cita->id}} - {{$cita->sintomas}}</td>
             <td>{{$cita->especialidad->nombre}}</td>
             @if($role == 'paciente')
             <td>{{$cita->medico->name}}</td>
@@ -35,8 +35,8 @@
                     <button type="submit" class="btn btn-sm btn-success" title="Confirmar Cita"><i class="ni fas fa-thumbs-up"></i></button>
                 </form>
                 @endif
-                <button type="button" class="btn btn-sm btn-danger d-inline-block" onclick="confirmacion();" title="Cancelar Cita"><i class="ni fas fa-trash"></i></button>
-                <form action="{{ route('eliminar-cita', $cita->id) }}" method="POST" id="cancelarCita">
+                <button type="button" class="btn btn-sm btn-danger d-inline-block" data-userid="{{ $cita->id }}" onclick="confirmacion(this.getAttribute('data-userid'));" title="Cancelar Cita"><i class="ni fas fa-trash"></i></button>
+                <form action="{{ route('eliminar-cita', $cita->id) }}" method="POST" id="cancelarCita{{ $cita->id }}">
                     @csrf
                     @method('DELETE')
                 </form>

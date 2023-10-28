@@ -34,10 +34,10 @@
                     <div class="card-body">
                         <ul class="nav nav-tabs justify-content-center" id="myTab3" role="tablist">
                             <li class="nav-item">
-                                <a href="#mis-citas" class="nav-link btn-icon icon-left active" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Confirmadas</a>
+                                <a href="#citas-pendientes" class="nav-link btn-icon icon-left active" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Pendientes</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#citas-pendientes" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Pendientes</a>
+                                <a href="#mis-citas" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Confirmadas</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#historial" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Historial de Citas</a>
@@ -48,11 +48,11 @@
                 
 
                 <div class="tab-content" id="myTabContent2">
-                    <div class="tab-pane fade show active" id="mis-citas" role="tabpanel">
-                        @include('cita.tablas.cita-confirmada')
-                    </div>
-                    <div class="tab-pane fade" id="citas-pendientes" role="tabpanel">
+                    <div class="tab-pane fade show active" id="citas-pendientes" role="tabpanel">
                         @include('cita.tablas.cita-pendiente')
+                    </div>
+                    <div class="tab-pane fade" id="mis-citas" role="tabpanel">
+                        @include('cita.tablas.cita-confirmada')
                     </div>
                     <div class="tab-pane fade" id="historial" role="tabpanel">
                         @include('cita.tablas.cita-historial')
@@ -64,12 +64,11 @@
     </div>
 </div>
 
+@endsection
 
-<!-- Jquery -->
-<script src="{{ asset('modules/jquery.min.js') }}"></script>
-<!-- JS Libraies -->
+@section('js')
 <script src="{{ asset('modules/izitoast/js/iziToast.min.js') }}"></script>
-<!-- Page Specific JS File -->
+
 <script src="{{ asset('js/page/modules-toastr.js') }}"></script>
 
 @if (session('message'))
@@ -86,13 +85,13 @@
 @endif
 
 <script>
-    function confirmacion() {
+    function confirmacion(userId) {
         $(document).ready(function() {
             iziToast.error({
                 theme: 'info',
                 icon: 'fa fa-question-circle',
                 title: 'Confirmación',
-                message: '¿Estás seguro de que deseas cancelar la cita antes de ser confirmada por el especialista?',
+                message: '¿Estás seguro de que deseas eliminar la cita antes de ser confirmada por el especialista?',
                 position: 'topCenter',
                 progressBarColor: 'rgba(255, 0, 0, 0.4)',
                 buttons: [
@@ -100,7 +99,7 @@
                         instance.hide({
                             transitionOut: 'fadeOut'
                         }, toast);
-                        document.querySelector('#cancelarCita').submit();
+                        document.querySelector('#cancelarCita'+userId).submit();
                         instance.hide({
                             transitionOut: 'fadeOut'
                         }, toast);
@@ -115,5 +114,4 @@
         });
     }
 </script>
-
 @endsection

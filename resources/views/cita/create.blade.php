@@ -160,12 +160,11 @@ use Illuminate\Support\Str; ?>
     </div>
 </div>
 
+@endsection
 
-<!-- Jquery -->
-<script src="{{ asset('modules/jquery.min.js') }}"></script>
-<!-- JS Libraies -->
+@section('js')
 <script src="{{ asset('modules/izitoast/js/iziToast.min.js') }}"></script>
-<!-- Page Specific JS File -->
+
 <script src="{{ asset('js/page/modules-toastr.js') }}"></script>
 
 <script src="{{ asset('js/citas/create.js') }}"></script>
