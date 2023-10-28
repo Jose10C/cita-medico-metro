@@ -17,22 +17,13 @@
     <link rel="stylesheet" href="{{ asset('modules/select2/dist/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}">
 
+    <!-- CSS Libraries Aditionals -->
+    @yield('css')
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
-    <!-- Start GA -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-94034622-3');
-    </script>
-    <!-- /END GA -->
 </head>
 
 <body>
@@ -62,7 +53,7 @@
             </footer>
         </div>
     </div>
-
+    
     <!-- General JS Scripts -->
     <script src="{{ asset('modules/jquery.min.js') }}"></script>
     <script src="{{ asset('modules/popper.js') }}"></script>
@@ -71,6 +62,9 @@
     <script src="{{ asset('modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
     <script src="{{ asset('modules/moment.min.js') }}"></script>
     <script src="{{ asset('js/stisla.js') }}"></script>
+
+    <!-- JS Libraries Aditionals -->
+    @yield('js')
 
     <!-- JS Libraies -->
     <script src="{{ asset('modules/bootstrap-daterangepicker/daterangepicker.js') }}"></script>

@@ -1,0 +1,2 @@
+<li><a class="nav-link" href="{{ route('create-cita') }}"><i class="far fa-square"></i> <span>Reservar Cita</span></a></li>
+<li><a class="nav-link" href="{{ route('mis-citas') }}"><i class="far fa-square"></i> <span>Mis Citas</span></a></li>

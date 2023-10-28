@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Especialidad;
-use Illuminate\Http\Request;
 
 class EspecialidadController extends Controller
 {

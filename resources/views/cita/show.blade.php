@@ -42,7 +42,14 @@
                                         <div class="profile-widget-item-value">
                                             @if($cita->estado == 'Cancelada')
                                             <span class="badge badge-danger">Cancelada</span>
-                                            @else
+                                            @endif
+                                            @if($cita->estado == 'Confirmada')
+                                            <span class="badge badge-warning">{{$cita->estado}}</span>
+                                            @endif
+                                            @if($cita->estado == 'Reservada')
+                                            <span class="badge badge-info">{{$cita->estado}}</span>
+                                            @endif
+                                            @if($cita->estado == 'Atendida')
                                             <span class="badge badge-success">{{$cita->estado}}</span>
                                             @endif
                                         </div>
@@ -50,53 +57,79 @@
                                 </div>
                             </div>
                             <div class="profile-widget-description pb-0">
-                                <div class="profile-widget-name">{{$cita->medico->name}}
-                                    <div class="text-muted d-inline font-weight-normal">
-                                        <div class="slash"></div> {{$cita->especialidad->nombre}}
-                                    </div>
+                                <div class="profile-widget-name">
+                                    @if($role == 'paciente' || $role == 'admin')
+                                        Médico(a): {{$cita->medico->name}} 
+                                        <div class="text-muted d-inline font-weight-normal">
+                                            <div class="slash"></div> Especialidad: {{$cita->especialidad->nombre}}
+                                        </div>
+                                    @endif
+                                    <br>
+                                    @if($role == 'medico' || $role == 'admin')
+                                        Paciente: {{$cita->paciente->name}}
+                                        <div class="text-muted d-inline font-weight-normal">
+                                            <div class="slash"></div> Para: {{$cita->especialidad->nombre}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
-                                        <div class="list-group" id="list-tab" role="tablist">
-                                            <a class="list-group-item list-group-item-action active" id="tipo-sintomas-list" data-toggle="list" href="#tipo-sintomas" role="tab">{{$cita->tipo}}</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="tab-content" id="nav-tabContent">
-                                            <div class="tab-pane fade show active" id="tipo-sintomas" role="tabpanel" aria-labelledby="tipo-sintomas-list">
-                                            {{$cita->sintomas}}
-                                            </div>
-                                        </div>
+                                    <div class="table-responsive">
+                                        <table class="table  table-sm">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Tipo de Cita</th>
+                                                <th scope="col">Síntomas que presenta</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>{{$cita->tipo}}</td>
+                                                <td>{{$cita->sintomas}}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <hr>
                                 <div class="alert bg-light text-primary">
                                     <p>
                                         @if($cita->cancelacion)
                                         <li class="media">
                                             <img alt="image" class="mr-3 rounded-circle" width="50" src="{{asset('img/browsers/safari.png')}}">
                                             <div class="media-body">
-                                                <div class="media-title">Cancelado Por</div>
-                                                <div class="text-job text-muted">{{$cita->cancelacion->cancelado_por->name}}</div>
+                                                <div class="media-title">
+                                                    Estado 
+                                                    @if($cita->estado == 'Cancelada')
+                                                    <span class="badge badge-danger">Cancelada</span>
+                                                    @else
+                                                    <span class="badge badge-success">{{$cita->estado}}</span>
+                                                    @endif
+                                                </div>
+                                                <div class="text-job">( {{$cita->cancelacion->cancelado_por->name}} )</div>
                                             </div>
                                             <div class="media-items">
                                                 <div class="media-item">
-                                                    <div class="media-value">{{$cita->cancelacion->created_at}}</div>
+                                                    <div class="media-value"> <small> {{$cita->cancelacion->created_at}} </small> </div>
                                                     <div class="media-label">Fecha de Cancelación</div>
                                                 </div>
                                                 <div class="media-item">
-                                                    <div class="media-value">{{$cita->cancelacion->motivo}}</div>
+                                                    <div class="media-value"> <small> {{$cita->cancelacion->motivo}} </small> </div>
                                                     <div class="media-label">Motivo</div>
                                                 </div>
                                             </div>
                                         </li>
                                         @else
                                         <li class="media">
+                                            @if($cita->estado == 'Cancelada')
                                             <img alt="image" class="mr-3 rounded-circle" width="50" src="{{asset('img/browsers/safari.png')}}">
                                             <div class="media-body">
-                                                <div class="media-title">Motivo</div>
-                                                <div class="text-job text-muted">La cita fue cancelada antes de su confirmación.</div>
+                                                <div class="media-title">Motivo 
+                                                    @if($cita->estado == 'Cancelada')
+                                                    <span class="badge badge-danger">Cancelada</span>
+                                                    @endif
+                                                </div>
+                                                <div class="text-job">* La cita fue cancelada antes de su confirmación.</div>
                                             </div>
+                                            @endif
                                         </li>
                                         @endif
                                     </p>

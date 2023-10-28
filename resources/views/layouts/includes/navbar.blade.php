@@ -200,8 +200,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
-                <a href="features-profile.html" class="dropdown-item has-icon">
-                    <i class="far fa-user"></i> Profile
+                <a href="{{ route('users.profile.edit') }}" class="dropdown-item has-icon">
+                    <i class="far fa-user"></i> Perfil
                 </a>
                 <a href="features-activities.html" class="dropdown-item has-icon">
                     <i class="fas fa-bolt"></i> Actividedades

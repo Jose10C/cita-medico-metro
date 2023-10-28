@@ -17,47 +17,45 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Lista de Mis Citas</h4>
+                    <h4>Mis Citas</h4>
                     <div class="card-header-form">
-                        <form>
+                        <!-- <form>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search">
                                 <div class="input-group-btn">
                                     <button class="btn btn-primary"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
 
                 <div class="card-body p-2">
                     <div class="card-body">
-                        <ul class="nav nav-pills" id="myTab3" role="tablist">
+                        <ul class="nav nav-tabs justify-content-center" id="myTab3" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#mis-citas" role="tab" aria-selected="true">
-                                    <i class="ni ni-calendar-grid-58 mr-2"></i>Mis Citas</a>
+                                <a href="#mis-citas" class="nav-link btn-icon icon-left active" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Confirmadas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#citas-pendientes" role="tab" aria-selected="false">
-                                    <i class="ni ni-bell-55 mr-2"></i>Citas Pendientes</a>
+                                <a href="#citas-pendientes" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Pendientes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#historial" role="tab" aria-selected="false">
-                                    <i class="ni ni-folder-17 mr-2"></i>Historial</a>
+                                <a href="#historial" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Historial de Citas</a>
                             </li>
                         </ul>
                     </div>
                 </div>
+                
 
                 <div class="tab-content" id="myTabContent2">
                     <div class="tab-pane fade show active" id="mis-citas" role="tabpanel">
-                        @include('cita.cita-confirmada')
+                        @include('cita.tablas.cita-confirmada')
                     </div>
                     <div class="tab-pane fade" id="citas-pendientes" role="tabpanel">
-                        @include('cita.cita-pendiente')
+                        @include('cita.tablas.cita-pendiente')
                     </div>
                     <div class="tab-pane fade" id="historial" role="tabpanel">
-                        @include('cita.cita-historial')
+                        @include('cita.tablas.cita-historial')
                     </div>
                 </div>
 
@@ -94,7 +92,7 @@
                 theme: 'info',
                 icon: 'fa fa-question-circle',
                 title: 'Confirmación',
-                message: '¿Estás seguro de que deseas cancelar la cita reservada?',
+                message: '¿Estás seguro de que deseas cancelar la cita antes de ser confirmada por el especialista?',
                 position: 'topCenter',
                 progressBarColor: 'rgba(255, 0, 0, 0.4)',
                 buttons: [

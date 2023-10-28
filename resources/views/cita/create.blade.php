@@ -24,7 +24,7 @@ use Illuminate\Support\Str; ?>
                 <div class="card-header">
                     <h4>Lista de Citas</h4>
                     <div class="card-header-form">
-                        <a href="" class="btn btn-icon icon-left btn-danger"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
+                        <a href="" class="btn btn-icon icon-left btn-dark"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
                     </div>
                 </div>
 

@@ -19,14 +19,19 @@
                 <div class="card-header">
                     <h4>Cancelar Cita</h4>
                     <div class="card-header-form">
-                        <a href="{{ route('mis-citas') }}" class="btn btn-icon icon-left btn-danger"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
+                        <a href="{{ route('mis-citas') }}" class="btn btn-icon icon-left btn-dark"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
                     </div>
                 </div>
 
                 <div class="card-body p-2">
                     <div class="card-body">
-                        <p>Se cancelará la cita reservada con el Médico <b>{{$cita->medico->name}}</b> (especialidad <b>{{$cita->especialidad->nombre}}</b>) para el día <b>{{$cita->fecha_cita}}</b>. </p>
-
+                        @if($role == 'paciente')
+                        <p>Se cancelará la cita reservada con el Médico <b>{{$cita->medico->name}}</b> (especialidad <b>{{$cita->especialidad->nombre}}</b>), programada para el día <b>{{$cita->fecha_cita}}</b> a horas <b>{{$cita->Scheduled_Time_12}}</b>. </p>
+                        @elseif($role == 'medico')
+                        <p>Se cancelará la cita reservada del Paciente <b>{{$cita->paciente->name}}</b> (especialidad <b>{{$cita->especialidad->nombre}}</b>), programada para el día <b>{{$cita->fecha_cita}}</b> a horas <b>{{$cita->Scheduled_Time_12}}</b>. </p>
+                        @else
+                        <p>Se cancelará la cita reservada del Paciente <b>{{$cita->paciente->name}}</b>, atendido por el Médico <b>{{$cita->medico->name}}</b> en la especialidad de <b>{{$cita->especialidad->nombre}}</b>, programada para el día <b>{{$cita->fecha_cita}}</b> a horas <b>{{$cita->Scheduled_Time_12}}</b>. </p>
+                        @endif
                         <form action="{{ route('cancelar-cita', $cita->id) }}" method="POST">
                             @csrf
                             <div class="form-group">

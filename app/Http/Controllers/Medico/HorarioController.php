@@ -34,7 +34,6 @@ class HorarioController extends Controller
 
         $dias = $this->dias;
 
-        //dd($horarios->toArray());
         return view('home.horario', ['dias' => $dias, 'horarios' => $horarios]);
     }
 

@@ -8,26 +8,56 @@ use App\Models\CitaCancelada;
 use App\Models\Citas;
 use App\Models\Especialidad;
 use Carbon\Carbon;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View as ViewView;
 
 class CitaController extends Controller
 {
     public function index()
     {
-        $citasConfirmadas = Citas::all()
-        ->where('estado','Confirmada')
-        ->where('paciente_id',auth()->id());
-        
-        $citasPendientes = Citas::all()
-        ->where('estado','Reservada')
-        ->where('paciente_id',auth()->id());
+        $role = auth()->user()->rol;
 
-        $citasHistorial = Citas::all()
-        ->whereIn('estado',['Atendida','Cancelada'])
-        ->where('paciente_id',auth()->id());
+        if($role == 'admin'){
+            $citasConfirmadas = Citas::all()
+            ->where('estado','Confirmada');
+            
+            $citasPendientes = Citas::all()
+            ->where('estado','Reservada');
+    
+            $citasHistorial = Citas::all()
+            ->whereIn('estado',['Atendida','Cancelada']);
+        }
+        elseif($role == 'medico'){
+            $citasConfirmadas = Citas::all()
+            ->where('estado','Confirmada')
+            ->where('medico_id',auth()->id());
+            
+            $citasPendientes = Citas::all()
+            ->where('estado','Reservada')
+            ->where('medico_id',auth()->id());
+    
+            $citasHistorial = Citas::all()
+            ->whereIn('estado',['Atendida','Cancelada'])
+            ->where('medico_id',auth()->id());
+        } elseif($role == 'paciente') {
+            $citasConfirmadas = Citas::all()
+            ->where('estado','Confirmada')
+            ->where('paciente_id',auth()->id());
+            
+            $citasPendientes = Citas::all()
+            ->where('estado','Reservada')
+            ->where('paciente_id',auth()->id());
+    
+            $citasHistorial = Citas::all()
+            ->whereIn('estado',['Atendida','Cancelada'])
+            ->where('paciente_id',auth()->id());
+        }
 
-        return view('cita.index', ['citasConfirmadas' => $citasConfirmadas, 'citasPendientes' => $citasPendientes, 'citasHistorial' => $citasHistorial]);
+        return view('cita.index', ['citasConfirmadas' => $citasConfirmadas, 'citasPendientes' => $citasPendientes, 'citasHistorial' => $citasHistorial, 'role' => $role]);
     }
 
     public function create(HorarioServiceInterface $horarioServiceInterface)
@@ -116,10 +146,10 @@ class CitaController extends Controller
 
         Citas::create($data);
 
-        return back()->with('message', 'Su cita se ha registrado correctamente.');
+        return redirect()->route('mis-citas')->with('message', 'Su cita se ha registrado correctamente.');
     }
 
-    public function cancel(Citas $cita, Request $request)
+    public function cancel(Citas $cita, Request $request): RedirectResponse
     {
         if($request->has('motivo')){
             $cancelacion = new CitaCancelada();
@@ -130,20 +160,64 @@ class CitaController extends Controller
         $cita->estado = 'Cancelada';
         $cita->save();
 
-        return redirect('mis-citas')->with('message', 'Su cita se ha cancelado correctamente.');
+        return redirect()->route('mis-citas')->with('message', 'Su cita se ha cancelado correctamente.');
     }
 
-    public function confirm(Citas $cita)
+    public function formcancel(Citas $cita)
     {
+        $role = auth()->user()->rol;
         if($cita->estado == 'Confirmada'){
-            return view('cita.cancelar-cita', ['cita' => $cita]);
+            return view('cita.cancelar-cita', ['cita' => $cita, 'role' => $role]);
         }
 
-        return redirect('mis-citas');
+        return redirect()->route('miscitas')->with('message', 'Su cita está cancelado.');
     }
 
-    public function show(Citas $cita)
+    public function show(Citas $cita): View
     {
-        return view('cita.show', ['cita' => $cita]);
+        $role = auth()->user()->rol;
+        return view('cita.show', ['cita' => $cita, 'role' => $role]);
+    }
+
+    public function confirm(Citas $cita): RedirectResponse
+    {
+        $cita->estado = 'Confirmada';
+        $cita->save();
+
+        return redirect()->route('mis-citas')->with('message', 'Su cita se ha confirmada correctamente, esté atento a su fecha de cita.');
+    }
+
+    public function destroy(Citas $cita): RedirectResponse
+    {
+        $cita->delete();
+
+        return redirect()->route('mis-citas')->with('message', 'La cita pendiente se ha eliminado correctamente.');
+    }
+
+   /*  public function formaccepted(Citas $cita, Request $request)
+    {
+        if($request->has('motivo')){
+            $cancelacion = new CitaCancelada();
+            $cancelacion->motivo = $request->input('motivo');
+            $cancelacion->cancelado_por_id = auth()->id();
+            $cita->cancelacion()->save($cancelacion);
+        }
+        $cita->estado = 'Cancelada';
+        $cita->save();
+
+        return redirect()->route('mis-citas')->with('message', 'Su cita se ha cancelado correctamente.');
+    } */
+
+    public function accepted(Citas $cita)
+    {
+        $role = auth()->user()->rol;
+        if($role == 'medico' || $role == 'admin'){
+            $cita->estado = 'Atendida';
+            $cita->save();
+
+            return redirect()->route('mis-citas')->with('message', 'La cita fue atendida satisfactoriamente.');
+        } else {
+            return redirect()->route('mis-citas')->with('message', 'No tiene permisos para realizar esta acción.');
+        }
     }
 }

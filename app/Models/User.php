@@ -25,6 +25,9 @@ class User extends Authenticatable
         'direccion',
         'telefono',
         'rol',
+        'lastname',
+        'biografia',
+        'avatar',
     ];
 
     /**
@@ -62,5 +65,25 @@ class User extends Authenticatable
     public function scopeMedicos($query)
     {
         return $query->where('rol', 'medico');
+    }
+
+    public function isCitaMedicos()
+    {
+        return $this->hasMany(Citas::class, 'medico_id');
+    }
+
+    public function acceptedCitas()
+    {
+        return $this->isCitaMedicos()->where('estado', 'Atendida');
+    }
+    
+    public function canceledCitas()
+    {
+        return $this->isCitaMedicos()->where('estado', 'Cancelada');
+    }
+
+    public function isCitaPacientes()
+    {
+        return $this->hasMany(Citas::class, 'paciente_id');
     }
 }
