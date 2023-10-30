@@ -26,7 +26,20 @@
             <td>{{$cita->fecha_cita}}</td>
             <td>{{$cita->Scheduled_Time_12}}</td>
             <td>{{$cita->tipo}}</td>
-            <td>{{$cita->estado}}</td>
+            <td>
+                @if($cita->estado == 'Reservada')
+                <img src="{{ asset('img/status/pendiente.png') }}" height="80px" alt="Reservada">
+                @endif
+                @if($cita->estado == 'Confirmada')
+                <img src="{{ asset('img/status/confirmada.png') }}" height="80px" alt="Confirmada">
+                @endif
+                @if($cita->estado == 'Cancelada')
+                <img src="{{ asset('img/status/cancelada.png') }}" height="80px" alt="Cancelada">
+                @endif
+                @if($cita->estado == 'Atendida')
+                <img src="{{ asset('img/status/atendida.png') }}" height="80px" alt="Atendida">
+                @endif
+            </td>
             <td>
                 @if($role == 'admin')
                 <a href="{{ route('cita-show', $cita->id) }}" class="btn btn-sm btn-info d-inline-block" title="Ver Cita"><i class="ni fas fa-info-circle"></i></a>

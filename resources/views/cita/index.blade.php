@@ -8,7 +8,7 @@
     <h1>@yield('title','Mis Citas')</h1>
     <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="{{ route('home') }}">Dashboard</a></div>
-        <div class="breadcrumb-item">Paciente</div>
+        <div class="breadcrumb-item">Mis Citas</div>
     </div>
 </div>
 
@@ -34,13 +34,13 @@
                     <div class="card-body">
                         <ul class="nav nav-tabs justify-content-center" id="myTab3" role="tablist">
                             <li class="nav-item">
-                                <a href="#citas-pendientes" class="nav-link btn-icon icon-left active" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Pendientes</a>
+                                <a href="#citas-pendientes" class="nav-link btn-icon icon-left active" data-toggle="tab" role="tab" aria-selected="false"><i class="fas fa-hourglass-half"></i> Citas Pendientes</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#mis-citas" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Citas Confirmadas</a>
+                                <a href="#mis-citas" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="fas fa-calendar-check"></i> Citas Confirmadas</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#historial" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="far fa-edit"></i> Historial de Citas</a>
+                                <a href="#historial" class="nav-link btn-icon icon-left" data-toggle="tab" role="tab" aria-selected="false"><i class="fas fa-clipboard"></i> Historial de Citas</a>
                             </li>
                         </ul>
                     </div>

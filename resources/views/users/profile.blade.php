@@ -27,7 +27,7 @@ use Illuminate\Support\Str; ?>
                 <div class="card-header">
                     <h4>Modificar Información Personal</h4>
                     <div class="card-header-form">
-                        <a href="" class="btn btn-icon icon-left btn-dark"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
+                        <a href="{{ route('home') }}" class="btn btn-icon icon-left btn-dark"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
                     </div>
                 </div>
 

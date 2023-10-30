@@ -12,7 +12,7 @@ use Illuminate\Support\Str; ?>
     <h1>@yield('title','Bienvenidos')</h1>
     <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="{{ route('home') }}">Dashboard</a></div>
-        <div class="breadcrumb-item"><a href="{{ route('especialidades.index') }}">Citas</a></div>
+        <div class="breadcrumb-item"><a href="{{ route('mis-citas') }}">Mis Citas</a></div>
         <div class="breadcrumb-item">Nuevo</div>
     </div>
 </div>
@@ -24,7 +24,7 @@ use Illuminate\Support\Str; ?>
                 <div class="card-header">
                     <h4>Lista de Citas</h4>
                     <div class="card-header-form">
-                        <a href="" class="btn btn-icon icon-left btn-dark"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
+                        <a href="{{ route('mis-citas') }}" class="btn btn-icon icon-left btn-dark"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Regresar</a>
                     </div>
                 </div>
 

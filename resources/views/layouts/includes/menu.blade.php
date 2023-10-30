@@ -1,44 +1,35 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla {{ config('app.name') }}</a>
+            <a href="{{ route('home') }}">SIS {{ config('app.name') }}</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="{{ route('home') }}">SIS</a>
         </div>
         <ul class="sidebar-menu">
-            <li class="menu-header">Dashboard</li>
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                    <!-- <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li> -->
-                </ul>
+            <li class="menu-header">Incio</li>
+            <li class="{{ request()->routeIs('home') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('home') }}"> <i class="	fas fa-home"></i> <span>Dashboard</span></a>
             </li>
-            <!-- <li class="menu-header">Starter</li>
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="layout-default.html">Default Layout</a></li>
-                    <li><a class="nav-link" href="layout-transparent.html">Transparent Sidebar</a></li>
-                    <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
-                </ul>
-            </li> -->
-            <li class="menu-header">Menu</li>
 
+            <li class="menu-header">Menu</li>
             @include('layouts.includes.menu.'.auth()->user()->rol)
 
+            @if(auth()->user()->rol == 'admin')
             <li class="menu-header">Reportes</li>
-            <li><a class="nav-link" href="{{ route('reports.citas.line')}}">Frecuencia Citas</a></li>
-            <li><a class="nav-link" href="{{ route('reports.medicos.column')}}">Desempeño Médicos</a></li>
-            
-
+            <li class="{{ request()->routeIs('reports.citas.line') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('reports.citas.line')}}"> <i class="fas fa-id-card-alt"></i> <span>Frecuencia Citas</span> </a>
+            </li>
+            <li class="{{ request()->routeIs('reports.medicos.column') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('reports.medicos.column')}}"> <i class="fas fa-user-md"></i> <span>Desempeño Médicos</span> </a>
+            </li>
+            @endif
         </ul>
 
-        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-                <i class="fas fa-rocket"></i> Documentation
+        <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+            <a href="{{ route('logout') }}" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-rocket"></i> Salir
             </a>
-        </div>
+        </div> -->
     </aside>
 </div>

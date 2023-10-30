@@ -24,7 +24,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [App\Http\Controllers\ViewsController::class, 'listMedicos'])->name('lista.medicos');
 
 Route::middleware('auth', 'admin')->group(function () {
     
@@ -37,9 +38,9 @@ Route::middleware('auth', 'admin')->group(function () {
     //Rutas para los reportes
     Route::get('reports/citas/line', [App\Http\Controllers\Admin\ChartController::class,'citasLine'])->name('reports.citas.line');
     Route::get('reports/medicos/column', [App\Http\Controllers\Admin\ChartController::class,'medicosColumn'])->name('reports.medicos.column');
+    Route::get('reports/medicos/column/data', [App\Http\Controllers\Admin\ChartController::class,'medicosJson'])->name('reports.medicos.json');
     
 });
-Route::get('reports/medicos/column/data', [App\Http\Controllers\Admin\ChartController::class,'medicosJson'])->name('reports.medicos.json');
 
 Route::middleware('auth', 'medico')->group(function () {
     
@@ -65,4 +66,6 @@ Route::middleware('auth')->group(function() {
     Route::get('/especialidades/{especialidad}/medicos', [App\Http\Controllers\Api\EspecialidadController::class,'medicos'])->name('especialidades.medicos');
 
     Route::get('/horario/horas', [App\Http\Controllers\Api\HorarioController::class,'horas'])->name('horario.horas');
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

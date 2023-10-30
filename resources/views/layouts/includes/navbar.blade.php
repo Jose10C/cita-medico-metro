@@ -200,14 +200,18 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
-                <a href="{{ route('users.profile.edit') }}" class="dropdown-item has-icon">
+                <a href="{{ route('create-cita') }}" class="dropdown-item has-icon {{request()->routeIs('create-cita') ? 'active' : ''}}">
+                    <i class="fas fa-heartbeat"></i> Reservar Cita
+                </a>
+                <a href="{{ route('mis-citas') }}" class="dropdown-item has-icon {{request()->routeIs('mis-citas') ? 'active' : ''}}">
+                    <i class="far fa-clipboard"></i> Mis Citas
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="{{ route('users.profile.edit') }}" class="dropdown-item has-icon {{ request()->routeIs('users.profile.edit') ? 'active' : '' }}">
                     <i class="far fa-user"></i> Perfil
                 </a>
-                <a href="features-activities.html" class="dropdown-item has-icon">
-                    <i class="fas fa-bolt"></i> Actividedades
-                </a>
-                <a href="features-settings.html" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Configuración
+                <a href="#" class="dropdown-item has-icon">
+                    <i class="fas fa-cog"></i> Cambiar Contraseña
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"

@@ -50,7 +50,7 @@ class ChartController extends Controller
             $query->whereBetween('fecha_cita', [$start, $end]);
         }])
         ->orderBy('accepted_citas_count', 'desc')
-        ->take(7)
+        ->take(10)
         ->get();
         
         $data = [];
