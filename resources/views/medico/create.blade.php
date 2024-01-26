@@ -62,7 +62,7 @@ use Illuminate\Support\Str; ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="dni" class="col-sm-3 col-form-label">Cedula</label>
+                                    <label for="dni" class="col-sm-3 col-form-label">D.N.I.</label>
                                     <div class="col-sm-9">
                                         <input type="text" id="dni" name="dni" class="form-control" required="" value="{{ old('dni') }}">
                                         <div class="invalid-feedback">

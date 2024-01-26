@@ -18,23 +18,14 @@
             <td>{{$cita->sintomas}}</td>
             <td>{{$cita->especialidad->nombre}}</td>
             @if($role == 'paciente')
-            <td>{{$cita->medico->name}}</td>
+            <td>{{$cita->medico->name}} {{$cita->medico->lastname}}</td>
             @elseif($role == 'medico')
-            <td>{{$cita->paciente->name}}</td>
+            <td>{{$cita->paciente->name}} {{$cita->paciente->lastname}}</td>
             @endif
             <td>{{$cita->fecha_cita}} | {{$cita->Scheduled_Time_12}}</td>
             <td>
                 @if($cita->estado == 'Reservada')
-                <img src="{{ asset('img/status/pendiente.png') }}" height="80px" alt="Reservada">
-                @endif
-                @if($cita->estado == 'Confirmada')
-                <img src="{{ asset('img/status/confirmada.png') }}" height="80px" alt="Confirmada">
-                @endif
-                @if($cita->estado == 'Cancelada')
-                <img src="{{ asset('img/status/cancelada.png') }}" height="80px" alt="Cancelada">
-                @endif
-                @if($cita->estado == 'Atendida')
-                <img src="{{ asset('img/status/atendida.png') }}" height="80px" alt="Atendida">
+                <img src="{{ asset('img/status/cita-pendiente.png') }}" width="180px" alt="Reservada">
                 @endif
             </td>
             <td>{{$cita->tipo}}</td>
@@ -45,10 +36,10 @@
                 @if($role == 'medico' || $role == 'admin')
                 <form action="{{ route('confirmar-cita', $cita->id) }}" method="POST" class="d-inline-block">
                     @csrf
-                    <button type="submit" class="btn btn-sm btn-success" title="Confirmar Cita"><i class="ni fas fa-thumbs-up"></i></button>
+                    <button type="submit" class="btn btn-sm btn-success" title="Confirmar Cita"><i class="ni fas fa-thumbs-up"></i>Confirmar</button>
                 </form>
                 @endif
-                <button type="button" class="btn btn-sm btn-danger d-inline-block" data-userid="{{ $cita->id }}" onclick="confirmacion(this.getAttribute('data-userid'));" title="Cancelar Cita"><i class="ni fas fa-trash"></i></button>
+                <button type="button" class="btn btn-sm btn-danger d-inline-block" data-userid="{{ $cita->id }}" onclick="confirmacion(this.getAttribute('data-userid'));" title="Cancelar Cita"><i class="ni fas fa-trash"></i>Eliminar</button>
                 <form action="{{ route('eliminar-cita', $cita->id) }}" method="POST" id="cancelarCita{{ $cita->id }}">
                     @csrf
                     @method('DELETE')
@@ -57,4 +48,5 @@
         </tr>
         @endforeach
     </table>
+    {{ $citasPendientes->links() }}
 </div>

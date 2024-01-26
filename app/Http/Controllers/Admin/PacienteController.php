@@ -29,18 +29,20 @@ class PacienteController extends Controller
     {
         $rules = [
             'name' => 'required|min:3',
-            'email' => 'required|email',
-            'dni' => 'required|digits:8',
+            'email' => 'required|email|unique:users',
+            'dni' => 'required|digits:8|unique:users',
             'direccion' => 'nullable|min:6',
             'telefono' => 'required',
         ];
         $messages = [
             'name.required' => 'El nombre no pueder ser vacio.',
             'name.min' => 'El nombre debe tener al menos 3 caracteres.',
-            'email.required' => 'El email no pueder ser vacio.',
-            'email.email' => 'El email no tiene un formato válido.',
-            'dni.required' => 'El DNI no pueder ser vacio.',
-            'dni.digits' => 'El DNI debe tener 8 dígitos.',
+            'email.required' => 'El correo no pueder ser vacio.',
+            'email.email' => 'El correo no tiene un formato válido.',
+            'email.unique' => 'El correo ya existe, ingreso otro correo válido.',
+            'dni.required' => 'El D.N.I. no pueder ser vacio.',
+            'dni.digits' => 'El D.N.I. debe tener 8 dígitos.',
+            'dni.unique' => 'El D.N.I. ya está registrado, ingrese otro válido.',
             'direccion.min' => 'La dirección debe tener al menos 6 caracteres.',
             'telefono.required' => 'El teléfono no pueder ser vacio.',
         ];
@@ -75,18 +77,20 @@ class PacienteController extends Controller
     {
         $rules = [
             'name' => 'required|min:3',
-            'email' => 'required|email',
-            'dni' => 'required|digits:8',
+            'email' => 'required|email|unique:users,email,'.$id,
+            'dni' => 'required|digits:8|unique:users,dni,'.$id,
             'direccion' => 'nullable|min:6',
             'telefono' => 'required',
         ];
         $messages = [
             'name.required' => 'El nombre no pueder ser vacio.',
             'name.min' => 'El nombre debe tener al menos 3 caracteres.',
-            'email.required' => 'El email no pueder ser vacio.',
-            'email.email' => 'El email no tiene un formato válido.',
-            'dni.required' => 'El DNI no pueder ser vacio.',
-            'dni.digits' => 'El DNI debe tener 8 dígitos.',
+            'email.required' => 'El correo no pueder ser vacio.',
+            'email.email' => 'El correo no tiene un formato válido.',
+            'email.unique' => 'El correo ya existe, ingreso otro correo válido.',
+            'dni.required' => 'El D.N.I. no pueder ser vacio.',
+            'dni.digits' => 'El D.N.I. debe tener 8 dígitos.',
+            'dni.unique' => 'El D.N.I. ya está registrado, ingrese otro válido.',
             'direccion.min' => 'La dirección debe tener al menos 6 caracteres.',
             'telefono.required' => 'El teléfono no pueder ser vacio.',
         ];
@@ -104,7 +108,7 @@ class PacienteController extends Controller
 
         $user->fill($data);
 
-        $user->save();
+        $user->update();
 
         return redirect()->route('pacientes.index')->with('message', 'La información del paciente de a actualizado con éxito');
     }

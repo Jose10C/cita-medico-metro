@@ -60,9 +60,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="dni" class="col-sm-3 col-form-label">Cedula</label>
+                                    <label for="dni" class="col-sm-3 col-form-label">D.N.I.</label>
                                     <div class="col-sm-9">
-                                        <input type="text" id="dni" name="dni" class="form-control" required="" value="{{ old('dni',$medico->dni) }}">
+                                        <input type="text" id="dni" name="dni" class="form-control" maxlength="8" required="" value="{{ old('dni',$medico->dni) }}">
                                         <div class="invalid-feedback">
                                             Debe ingresar una cedula válida.
                                         </div>
@@ -77,7 +77,7 @@
                                 <div class="form-group row">
                                     <label for="telefono" class="col-sm-3 col-form-label">Teléfono</label>
                                     <div class="col-sm-9">
-                                        <input type="number" id="telefono" name="telefono" class="form-control" required="" value="{{ old('telefono',$medico->telefono) }}">
+                                        <input type="number" id="telefono" name="telefono" class="form-control" maxlength="9" required="" value="{{ old('telefono',$medico->telefono) }}">
                                         <div class="invalid-feedback">
                                             Debe ingresar su telefono.
                                         </div>

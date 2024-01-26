@@ -200,12 +200,36 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
+                @if(auth()->user()->rol == 'admin')
+                <a href="{{ route('especialidades.index') }}" class="dropdown-item has-icon {{request()->routeIs('especialidades.index') ? 'active' : ''}}">
+                    <i class="fas fa-hospital"></i> Especialidades
+                </a>
+                <a href="{{ route('medicos.index') }}" class="dropdown-item has-icon {{request()->routeIs('medicos.index') ? 'active' : ''}}">
+                    <i class="fas fa-user-md"></i> Médicos
+                </a>
+                <a href="{{ route('pacientes.index') }}" class="dropdown-item has-icon {{request()->routeIs('pacientes.index') ? 'active' : ''}}">
+                    <i class="fas fa-procedures"></i> Pacientes
+                </a>
+                <a href="{{ route('mis-citas') }}" class="dropdown-item has-icon {{request()->routeIs('mis-citas') ? 'active' : ''}}">
+                    <i class="far fa-clipboard"></i> Citas Médicas
+                </a>
+                @endif
+                @if(auth()->user()->rol == 'medico')
+                <a href="{{ route('edit-horario') }}" class="dropdown-item has-icon {{request()->routeIs('edit-horario') ? 'active' : ''}}">
+                    <i class="fas fa-clock"></i> Horarios
+                </a>
+                <a href="{{ route('mis-citas') }}" class="dropdown-item has-icon {{request()->routeIs('mis-citas') ? 'active' : ''}}">
+                    <i class="far fa-clipboard"></i> Mis Citas
+                </a>
+                @endif
+                @if(auth()->user()->rol == 'paciente')
                 <a href="{{ route('create-cita') }}" class="dropdown-item has-icon {{request()->routeIs('create-cita') ? 'active' : ''}}">
                     <i class="fas fa-heartbeat"></i> Reservar Cita
                 </a>
                 <a href="{{ route('mis-citas') }}" class="dropdown-item has-icon {{request()->routeIs('mis-citas') ? 'active' : ''}}">
                     <i class="far fa-clipboard"></i> Mis Citas
                 </a>
+                @endif
                 <div class="dropdown-divider"></div>
                 <a href="{{ route('users.profile.edit') }}" class="dropdown-item has-icon {{ request()->routeIs('users.profile.edit') ? 'active' : '' }}">
                     <i class="far fa-user"></i> Perfil

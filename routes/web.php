@@ -1,11 +1,14 @@
 <?php
 
+use App\Events\CitaEstadoEvent;
 use App\Http\Controllers\Admin\EspecialidadController;
 use App\Http\Controllers\Admin\MedicoController;
 use App\Http\Controllers\Admin\PacienteController;
+use App\Http\Controllers\FullCalendarController;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,30 +23,30 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('incio');
+
+Route::get('/eco', function() {
+    event( new CitaEstadoEvent);
+    return 'Escuchado';
 });
 
 Auth::routes();
 
-
 Route::get('/', [App\Http\Controllers\ViewsController::class, 'listMedicos'])->name('lista.medicos');
+Route::get('/paciente/buscar-mi-cita', [App\Http\Controllers\Paciente\CitaController::class, 'buscarMiCita'])->name('buscar.cita');
 
 Route::middleware('auth', 'admin')->group(function () {
-    
+    //Rutas Resources 
     Route::resource('especialidades', EspecialidadController::class);
-
     Route::resource('medicos', MedicoController::class);
-
     Route::resource('pacientes', PacienteController::class);
-
     //Rutas para los reportes
     Route::get('reports/citas/line', [App\Http\Controllers\Admin\ChartController::class,'citasLine'])->name('reports.citas.line');
     Route::get('reports/medicos/column', [App\Http\Controllers\Admin\ChartController::class,'medicosColumn'])->name('reports.medicos.column');
     Route::get('reports/medicos/column/data', [App\Http\Controllers\Admin\ChartController::class,'medicosJson'])->name('reports.medicos.json');
-    
 });
 
 Route::middleware('auth', 'medico')->group(function () {
-    
     Route::get('/horario', [App\Http\Controllers\Medico\HorarioController::class,'edit'])->name('edit-horario');
     Route::post('/horario', [App\Http\Controllers\Medico\HorarioController::class,'store'])->name('store-horario');
 });
@@ -68,4 +71,33 @@ Route::middleware('auth')->group(function() {
     Route::get('/horario/horas', [App\Http\Controllers\Api\HorarioController::class,'horas'])->name('horario.horas');
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    
+        //Ruta Complementos: Crear Cita Rápida
+        Route::post('/medico-cita-store', [App\Http\Controllers\Paciente\CitaController::class,'medicoCrearCitaStore'])->name('medico-crear-cita-store');
+        Route::get('/medico-cita', [App\Http\Controllers\Paciente\CitaController::class,'medicoCrearCita'])->name('medico-crear-cita');
+    
+});
+
+Route::get('/notifiacion', [App\Http\Controllers\Notificacion\NotificacionController::class, 'send'])->name('send');
+
+Route::get('/fullcalendars', [FullCalendarController::class, 'index']);
+Route::post('/fullcalendar/create', [FullCalendarController::class, 'create']);
+Route::post('/fullcalendar/update', [FullCalendarController::class, 'update']);
+Route::post('/fullcalendar/delete', [FullCalendarController::class, 'destroy']);
+
+Route::get('/calendario', [App\Http\Controllers\FullCalendarController::class, 'calendario'])->name('mi-calendario');
+
+//PDF y QR
+//Route::get('/pdf', [\App\Http\Controllers\PdfController::class, 'generarPdf'])->name('generar.pdf');
+Route::get('/pdf-generate', function() {
+    $pdf = PDF::loadView('upload.docs.documento-pdf');
+    return $pdf->stream();
+});
+
+Route::get('/qrcode', function () {
+    //return QrCode::size(300)->generate('A basic example of QR code!'); //text
+    //return QrCode::size(300)->phoneNumber('+51 924366489'); //celular
+    $qrCode = QrCode::style('round')->gradient(255,0,150,50,20,150,'radial')->size(250)->email('c2-jose@hotmail.com', 'Aqui va el asunto', 'Este es el mensaje de prueba.');
+    return $qrCode;
 });

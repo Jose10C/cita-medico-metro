@@ -1,4 +1,6 @@
-<li class="{{ Request::route()->getName() == 'especialidades.index' ? 'active' : '' }}"><a class="nav-link" href="{{ route('especialidades.index') }}"><i class="far fa-square"></i> <span>Especialidad</span></a></li>
-<li class="{{ Request::route()->getName() == 'medicos.index' ? 'active' : '' }}"><a class="nav-link" href="{{ route('medicos.index') }}"><i class="far fa-square"></i> <span>Médicos</span></a></li>
-<li class="{{ Request::route()->getName() == 'pacientes.index' ? 'active' : '' }}"><a class="nav-link" href="{{ route('pacientes.index') }}"><i class="far fa-square"></i> <span>Pacientes</span></a></li>
-<li class="{{ Request::route()->getName() == 'mis-citas' ? 'active' : '' }}"><a class="nav-link" href="{{ route('mis-citas') }}"><i class="far fa-square"></i> <span>Citas Médicas</span></a></li>
+<li class="{{ Request::route()->getName() == 'especialidades.index' ? 'active' : '' }}"><a class="nav-link" href="{{ route('especialidades.index') }}"><i class="fas fa-hospital"></i> <span>Especialidad</span></a></li>
+<li class="{{ Request::route()->getName() == 'medicos.index' ? 'active' : '' }}"><a class="nav-link" href="{{ route('medicos.index') }}"><i class="fas fa-user-md"></i> <span>Médicos</span></a></li>
+<li class="{{ Request::route()->getName() == 'pacientes.index' ? 'active' : '' }}"><a class="nav-link" href="{{ route('pacientes.index') }}"><i class="fas fa-procedures"></i> <span>Pacientes</span></a></li>
+<li class="{{ Request::route()->getName() == 'mis-citas' ? 'active' : '' }}"><a class="nav-link" href="{{ route('mis-citas') }}"><i class="fas fa-clipboard"></i> <span>Citas Médicas</span></a></li>
+<li class="menu-header">Complementos</li>
+<li class="{{ Request::route()->getName() == 'medico-crear-cita' ? 'active' : '' }}"><a class="nav-link" href="{{ route('medico-crear-cita') }}"><i class="fas fa-clipboard"></i> <span>Crear Cita</span></a></li>

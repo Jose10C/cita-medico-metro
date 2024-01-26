@@ -84,6 +84,21 @@
 </script>
 @endif
 
+@if ($errors->any())
+@foreach ($errors->all() as $error)
+<script>
+    $(document).ready(function() {
+        iziToast.error({
+            title: 'Error!',
+            message: "{{ $error }}",
+            position: 'topRight',
+            icon: 'fa fa-ban',
+        });
+    });
+</script>
+@endforeach
+@endif
+
 <script>
     function confirmacion(userId) {
         $(document).ready(function() {
