@@ -6,7 +6,7 @@
                 <div class="emergency">
                     <i class="fa fa-tty"></i>
                     <span class="text">Emergencias</span>
-                    <span class="number">1-300-400-8211</span>
+                    <span class="number">(083)-322-312</span>
                     <img src="{{ asset('img/clinica/emergency-divider.png') }}" alt="iii">
                 </div>
             </div>
@@ -14,73 +14,36 @@
 
         <div class="main-footer">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="useful-links">
                         <div class="title">
-                            <h5>Medical guide</h5>
+                            <h5>Menú de Pagina</h5>
                         </div>
 
                         <div class="detail">
                             <ul>
-                                <li><a href="#.">Home</a></li>
-                                <li><a href="#.">About Us</a></li>
-                                <li><a href="#.">Services</a></li>
-                                <li><a href="#.">Departments</a></li>
-                                <li><a href="#.">Timetable</a></li>
-                                <li><a href="#.">Why Us</a></li>
-                                <li><a href="#.">Specilaties</a></li>
-                                <li><a href="#.">Contact Us</a></li>
-                                <li><a href="#.">Events</a></li>
+                                <li><a href="{{ route('lista.medicos') }}">Incio</a></li>
+                                <li><a href="{{ route('nosotros.index') }}">Nosotros</a></li>
+                                <li><a href="{{ route('all.noticias') }}">Noticias</a></li>
+                                <li><a href="{{ route('servicios.index') }}">Servicios</a></li>
+                                <li><a href="{{ route('contact.index') }}">Contactanos</a></li>
+                                <li><a href="{{ route('login') }}">Inciar Sesion</a></li>
+                                <li><a href="{{ route('register') }}">Reservar Cita</a></li>
+                                <li><a href="{{ route('register') }}">Registrarse</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="title">
-                        <h5>LATEST TWEETS</h5>
-                    </div>
-
-                    <div class="detail">
-                        <div class="tweets">
-                            <div class="icon">
-                                <i class="icon-yen"></i>
-                            </div>
-
-                            <div class="text">
-                                <p>
-                                    <a href="#.">@Rotography</a> Please kindly use Support
-                                    Forum: <a href="#.">Medical.co.uk</a>
-                                </p>
-                                <span>3 days ago</span>
-                            </div>
-                        </div>
-
-                        <div class="tweets">
-                            <div class="icon">
-                                <i class="icon-yen"></i>
-                            </div>
-
-                            <div class="text">
-                                <p>
-                                    A quick launcher for WordPress dashboard
-                                    <a href="#.">@Medical</a>
-                                </p>
-                                <span>about a week ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="newsletter">
                         <div class="title">
-                            <h5>NEWSLETTER</h5>
+                            <h5>REGISTRARSE</h5>
                         </div>
 
                         <div class="detail">
                             <div class="signup-text">
                                 <i class="icon-dollar"></i>
-                                <span>Sign up with your name and email to get updates fresh
-                                    updates.</span>
+                                <span>Regístrate con tu nombre y correo electrónico para realizar citas médicas</span>
                             </div>
 
                             <div class="form">
@@ -88,34 +51,32 @@
                                 <p class="subscribe_error" id="subscribe_error" style="display: none"></p>
 
                                 <form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
-                                    <input type="text" data-delay="300" placeholder="Your Name" name="subscribe_name" id="subscribe_name" onKeyPress="removeChecks();" class="input" />
-                                    <input type="text" data-delay="300" placeholder="Email Address" name="subscribe_email" id="subscribe_email" onKeyPress="removeChecks();" class="input" />
-                                    <input name="Subscribe" type="submit" value="Subscribe" onClick="validateSubscription();" />
+                                    <input type="text" data-delay="300" placeholder="Nombre" name="subscribe_name" id="subscribe_name" onKeyPress="removeChecks();" class="input" />
+                                    <input type="text" data-delay="300" placeholder="Correo" name="subscribe_email" id="subscribe_email" onKeyPress="removeChecks();" class="input" />
+                                    <input name="Subscribe" type="submit" value="Reservar Cita" onClick="validateSubscription();" />
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="get-touch">
                         <div class="title">
-                            <h5>GET IN TOUCH</h5>
+                            <h5>CONTACTOS</h5>
                         </div>
 
                         <div class="detail">
                             <div class="get-touch">
-                                <span class="text">Medical Bibendum auctor, to consequat ipsum, nec
-                                    sagittis sem</span>
+                                <span class="text">Centro de Salud Metropolitano - Abancay </span>
 
                                 <ul>
                                     <li>
                                         <i class="icon-location"></i>
-                                        <span>Medical Ltd, Manhattan 1258, New York, USA
-                                            Lahore</span>
+                                        <span>Estamos Ubicados en:  Jr. Huancavelica - Abancay, Apurimac</span>
                                     </li>
                                     <li>
                                         <i class="icon-phone4"></i>
-                                        <span>(+1) 234 567 8901</span>
+                                        <span>(083)-322-312</span>
                                     </li>
                                     <li>
                                         <a href="#."><i class="icon-dollar"></i>
@@ -135,7 +96,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <span class="copyrights">
-                    Copyright &copy; Metropolitano - Abancay 2023  {{config('app.name')}} <a href="#">Doc</a>
+                    Copyright &copy; Metropolitano - Abancay 2023  {{config('app.name')}}
                     </span>
                 </div>
 

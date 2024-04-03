@@ -17,10 +17,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Total Admin</h4>
+                                <h4>Especialidades</h4>
                             </div>
                             <div class="card-body">
-                                10
+                                11
                             </div>
                         </div>
                     </div>
@@ -32,10 +32,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>News</h4>
+                                <h4>Medicos</h4>
                             </div>
                             <div class="card-body">
-                                42
+                                12
                             </div>
                         </div>
                     </div>
@@ -47,10 +47,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Reports</h4>
+                                <h4>Pacientes</h4>
                             </div>
                             <div class="card-body">
-                                1,201
+                                326
                             </div>
                         </div>
                     </div>
@@ -62,10 +62,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Online Users</h4>
+                                <h4>Citas Registradas</h4>
                             </div>
                             <div class="card-body">
-                                47
+                                68
                             </div>
                         </div>
                     </div>

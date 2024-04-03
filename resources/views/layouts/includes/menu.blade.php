@@ -23,20 +23,14 @@
             <li class="{{ request()->routeIs('reports.medicos.column') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('reports.medicos.column')}}"> <i class="fas fa-user-md"></i> <span>Desempeño Médicos</span> </a>
             </li>
+            <li class="menu-header">Novedades</li>
+           
             @endif
             <li class="menu-header">Calendario</li>
             <li class="{{ request()->routeIs('mi-calendario') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('mi-calendario')}}"> <i class="fas fa-calendar-alt"></i> <span>Calendario</span> </a>
             </li>
-            <li class="menu-header">Ayuda</li>
-            <li class=""><a class="nav-link" href="#"><i class="fas fa-clipboard"></i> <span>Ayuda</span></a></li>
-            
+            <li class="menu-header">Ayuda</li>            
         </ul>
-
-        <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-            <a href="{{ route('logout') }}" class="btn btn-primary btn-lg btn-block btn-icon-split">
-                <i class="fas fa-rocket"></i> Salir
-            </a>
-        </div> -->
     </aside>
 </div>

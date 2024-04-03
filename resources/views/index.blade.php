@@ -45,14 +45,12 @@
                 <img src="{{ asset('img/clinica/slides/banner-img8.jpg') }}" alt="imagen" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                 <div class="tp-caption customin customout rs-parallaxlevel-0" data-x="right" data-y="188" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1200" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 4;"><img class="transprint" src="{{ asset('img/clinica/slides/transprint-bg.png') }}" alt="transicion">
                 </div>
-                <div class="tp-caption title-bold tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="218" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Medical care
+                <div class="tp-caption title-bold tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="218" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Medicina General
                 </div>
-                <div class="tp-caption small-title tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="255" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Health care
-                    SOLUTION
-                </div>
+                <div class="tp-caption small-title tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="255" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Especialistas en Medicina General</div>
                 <div class="tp-caption paragraph tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="325" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
-                    <div style="text-align:left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                        <br />do eiusmod tempor incididunt ut labore
+                    <div style="text-align:left;">Relize su reserva para medicina general, con nuestros
+                        <br />especialistas en los diferentes áreas.
                     </div>
                 </div>
                 <div class="tp-caption banner-button tp-resizeme rs-parallaxlevel-0  fade start" data-x="670" data-y="402" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap; border-radius: 5px;">
@@ -66,14 +64,13 @@
                 <img src="{{ asset('img/clinica/slides/banner-img9.jpg') }}" alt="iamgen 2" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                 <div class="tp-caption customin customout rs-parallaxlevel-0" data-x="left" data-y="188" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1200" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 4;"><img style="border-bottom:solid 6px #02adc6;" src="{{ asset('img/clinica/slides/transprint-bg.png') }}" alt="no se">
                 </div>
-                <div class="tp-caption title-bold tp-resizeme rs-parallaxlevel-0 fade start" data-x="30" data-y="218" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Family Plans
-                </div>
+                <div class="tp-caption title-bold tp-resizeme rs-parallaxlevel-0 fade start" data-x="30" data-y="218" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Atención para toda la familia</div>
                 <div class="tp-caption small-title tp-resizeme rs-parallaxlevel-0 fade start" data-x="30" data-y="255" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">affordable
-                    solutions
+                    Servicio de Primer Nivel
                 </div>
                 <div class="tp-caption paragraph tp-resizeme rs-parallaxlevel-0 fade start" data-x="30" data-y="325" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
-                    <div style="text-align:left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                        <br />do eiusmod tempor incididunt ut labore
+                    <div style="text-align:left;">Nuestros servicios en la salud estan a su alcance, con
+                        <br />la mejor atención para toda la familia.
                     </div>
                 </div>
                 <div class="tp-caption banner-button tp-resizeme rs-parallaxlevel-0  fade start" data-x="30" data-y="402" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap; border-radius: 5px;">
@@ -87,14 +84,13 @@
                 <img src="{{ asset('img/clinica/slides/banner-img10.jpg') }}" alt="knwiod" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                 <div class="tp-caption customin customout rs-parallaxlevel-0" data-x="right" data-y="188" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1200" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 4;"><img style="border-bottom:solid 6px #02adc6;" src="{{ asset('img/clinica/slides/transprint-bg.png') }}" alt="scscsc">
                 </div>
-                <div class="tp-caption title-bold tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="218" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Research
+                <div class="tp-caption title-bold tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="218" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Reservar Cita
                 </div>
-                <div class="tp-caption small-title tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="255" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">cancer
-                    researchers honored
+                <div class="tp-caption small-title tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="255" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Atecion para prevencion del cancer
                 </div>
                 <div class="tp-caption paragraph tp-resizeme rs-parallaxlevel-0 fade start" data-x="670" data-y="325" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
-                    <div style="text-align:left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                        <br />do eiusmod tempor incididunt ut labore
+                    <div style="text-align:left;">Venga a realizar su examen y evite
+                        <br />futuros problemas en su salud y prevenga el cancer.
                     </div>
                 </div>
                 <div class="tp-caption banner-button tp-resizeme rs-parallaxlevel-0  fade start" data-x="670" data-y="402" data-speed="1000" data-start="1800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap; border-radius: 5px;">
@@ -121,8 +117,12 @@
                 <section class="bgcolor-3">
                     <p class="error" id="error" style="display: none"></p>
                     <p class="success" id="success" style="display: none"></p>
-                    <form name="appointment_form" id="appointment_form" method="post" action="#" onSubmit="return false">
+                    <form method="POST" action="#" onSubmit="return false">
+                        @csrf
                         <span class="input input--kohana">
+                            <select name="especialidad_id" id="especialidad" class="form-control select2" required="">
+                                <option value="">-Seleccionar Especialidad</option>
+                            </select>
                             <input class="input__field input__field--kohana" type="text" id="input-29" name="input-29" />
                             <label class="input__label input__label--kohana" for="input-29">
                                 <i class="icon-user6 icon icon--kohana"></i>
@@ -178,11 +178,11 @@
                         </div>
 
                         <div class="detail">
-                            <h5>Operation Theater</h5>
+                            <h5>Laboratorio de Operaciones</h5>
                             <p>
-                                If you need a doctor for to consectetuer Lorem ipsum
-                                dolor, consectetur adipiscing elit Lorem ipsum dolor,
-                                consectetur Ut volutpat eros.
+                            Contamos con un moderno laboratorio de operaciones para
+                            garantizar la más alta calidad en nuestros 
+                            procedimientos médicos.
                             </p>
                         </div>
                     </div>
@@ -195,11 +195,11 @@
                         </div>
 
                         <div class="detail">
-                            <h5>Emergency Services</h5>
+                            <h5>Servicios de Emergencia</h5>
                             <p>
-                                If you need a doctor for to consectetuer Lorem ipsum
-                                dolor, consectetur adipiscing elit Lorem ipsum dolor,
-                                consectetur Ut volutpat eros.
+                            Estamos aquí para brindarte atención inmediata y de calidad en
+                            situaciones de emergencia. Nuestros servicios de emergencia
+                            están disponibles las 24 horas del día, los 7 días de la semana.
                             </p>
                         </div>
                     </div>
@@ -212,11 +212,9 @@
                         </div>
 
                         <div class="detail">
-                            <h5>Rehabilitation Center</h5>
+                            <h5>Centro de Rehabilitación</h5>
                             <p>
-                                If you need a doctor for to consectetuer Lorem ipsum
-                                dolor, consectetur adipiscing elit Lorem ipsum dolor,
-                                consectetur Ut volutpat eros.
+                            En nuestro Centro de Rehabilitación, te ofrecemos un espacio dedicado a tu recuperación y bienestar. Con un equipo multidisciplinario de especialistas en rehabilitación, diseñamos programas personalizados.
                             </p>
                         </div>
                     </div>
@@ -229,11 +227,9 @@
                         </div>
 
                         <div class="detail">
-                            <h5>Qualified Doctors</h5>
+                            <h5>Medicos Calificados</h5>
                             <p>
-                                If you need a doctor for to consectetuer Lorem ipsum
-                                dolor, consectetur adipiscing elit Lorem ipsum dolor,
-                                consectetur Ut volutpat eros.
+                            En nuestro centro, contamos con una destacada selección de médicos calificados y experimentados, comprometidos con brindarte la mejor atención médica posible.
                             </p>
                         </div>
                     </div>
@@ -249,11 +245,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="main-title">
-                        <h2><span>Welcome to</span> Medical Guide</h2>
+                        <h2><span>Bienvenidos a</span> Especialidades Medicas</h2>
                         <p>
-                            If you need a doctor for to consectetuer Lorem ipsum dolor,
-                            consectetur adipiscing elit. Ut volutpat eros adipiscing
-                            nonummy.
+                        Descubre algunos de los servicios frecuentes que ofrecemos en nuestro centro de salud. Desde consultas médicas generales hasta tratamientos especializados, estamos aquí para atender tus necesidades de salud de manera integral.
                         </p>
                     </div>
                 </div>
@@ -261,10 +255,10 @@
 
             <div id="tabbed-nav">
                 <ul>
-                    <li><a>Medical Surgery</a></li>
-                    <li><a>Departments</a></li>
-                    <li><a>Patient life</a></li>
-                    <li><a>Baby Birth</a></li>
+                    <li><a>Cirugía médica</a></li>
+                    <li><a>Departamentos</a></li>
+                    <li><a>Vida del paciente</a></li>
+                    <li><a>Nacimiento del bebé</a></li>
                 </ul>
 
                 <div>
@@ -278,19 +272,9 @@
 
                             <div class="col-md-6">
                                 <div class="detail">
-                                    <h4>Washington Medical Science Institute</h4>
+                                    <h4>Cirujía Médica</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat Duis.<br /><br />
-
-                                        Voluptate velit esse cillum dolore eu fugiat nulla
-                                        pariatur. Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        quis nostrud exercitation.
+                                    En C.S. Metropolitano, ofrecemos servicios de cirugía médica de vanguardia, respaldados por un equipo de cirujanos altamente calificados y experimentados. Nuestro compromiso es brindar atención quirúrgica de la más alta calidad, utilizando tecnología de punta y técnicas avanzadas para garantizar resultados óptimos para nuestros pacientes. Ya sea que necesites una cirugía de rutina o un procedimiento más complejo, puedes confiar en nuestro equipo para proporcionar cuidados seguros y efectivos en todas las etapas de tu tratamiento.
                                     </p>
                                     <a href="about-us.html">Reservar Cita</a>
                                 </div>
@@ -308,19 +292,9 @@
 
                             <div class="col-md-6">
                                 <div class="detail">
-                                    <h4>Medical Guide Departments</h4>
+                                    <h4>Departamentos</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat Duis.<br /><br />
-
-                                        Voluptate velit esse cillum dolore eu fugiat nulla
-                                        pariatur. Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        quis nostrud exercitation.
+                                    Nuestros departamentos médicos están diseñados para ofrecer una atención integral y especializada en diversas áreas de la medicina. Desde cardiología hasta neurología, contamos con un equipo de profesionales altamente capacitados y especializados en cada campo. Nuestro objetivo es proporcionar a nuestros pacientes un cuidado completo y personalizado, utilizando los últimos avances médicos y tecnológicos. Ya sea que necesites atención preventiva, diagnóstico o tratamiento, nuestros departamentos médicos están aquí para atender todas tus necesidades de salud con el más alto nivel de calidad y atención.
                                     </p>
                                     <a href="about-us.html">Reservar Cita</a>
                                 </div>
@@ -338,19 +312,9 @@
 
                             <div class="col-md-6">
                                 <div class="detail">
-                                    <h4>Patient Life in Hospital</h4>
+                                    <h4>Vida de Nuestros Pacientes</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat Duis.<br /><br />
-
-                                        Voluptate velit esse cillum dolore eu fugiat nulla
-                                        pariatur. Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        quis nostrud exercitation.
+                                    Nuestro enfoque en la vida del paciente va más allá del tratamiento médico; nos preocupamos por brindar un ambiente acogedor y comprensivo que promueva el bienestar integral. Desde el momento en que llegas, nos esforzamos por hacer tu estadía lo más cómoda y tranquila posible. Nuestro equipo de profesionales médicos y de apoyo está dedicado a cuidar no solo de tu salud física, sino también de tu bienestar emocional y mental. Te ofrecemos programas de apoyo, educación sobre la salud y servicios personalizados para ayudarte a navegar por tu experiencia médica con confianza y comodidad. En cada paso del camino, estamos aquí para apoyarte y brindarte la atención que mereces.
                                     </p>
                                     <a href="about-us.html">Reservar Cita</a>
                                 </div>
@@ -368,19 +332,9 @@
 
                             <div class="col-md-6">
                                 <div class="detail">
-                                    <h4>Latest Technology</h4>
+                                    <h4>Equipos de Ultima Tecnología</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat Duis.<br /><br />
-
-                                        Voluptate velit esse cillum dolore eu fugiat nulla
-                                        pariatur. Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        quis nostrud exercitation.
+                                    Nuestra institución médica está equipada con la última tecnología disponible en el campo de la salud. Nos comprometemos a proporcionar a nuestros pacientes acceso a equipos de vanguardia que permitan diagnósticos precisos y tratamientos efectivos. Desde tecnología de imágenes de alta resolución hasta sistemas de cirugía asistida por robot, estamos constantemente actualizando nuestros equipos para garantizar que nuestros pacientes reciban la mejor atención posible. Con nuestro compromiso con la innovación tecnológica, puedes confiar en que estás recibiendo atención médica de la más alta calidad en todo momento.
                                     </p>
                                     <a href="about-us.html">Reservar Cita</a>
                                 </div>
@@ -394,145 +348,7 @@
     <!--End Welcome-->
 
     <!--Start Specialists-->
-    <div class="meet-specialists">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-title">
-                        <h2><span>Meet Our</span> Specialists</h2>
-                        <p>
-                            If you need a doctor for to consectetuer Lorem ipsum dolor,
-                            consectetur adipiscing elit. Ut volutpat eros adipiscing
-                            nonummy.
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <div id="demo">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <div id="owl-demo4" class="owl-carousel">
-                                <div class="post item">
-                                    <div class="gallery-sec">
-                                        <div class="image-hover img-layer-slide-left-right">
-                                            <img src="{{ asset('img/clinica/team-member1.jpg') }}" alt="jtyer">
-                                            <div class="layer">
-                                                <a href="#."><i class="fa fa-facebook"></i></a>
-                                                <a href="#."><i class="fa fa-twitter"></i></a>
-                                                <a href="#."><i class="fa fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="detail">
-                                        <h6>Dr. Andrew Bert</h6>
-                                        <span>Outpatient Surgery</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Donec nec eros eget nisl fringilla commodo.
-                                        </p>
-                                        <a href="team-member-detail.html">- View Profile</a>
-                                    </div>
-                                </div>
-                                <div class="post item">
-                                    <div class="gallery-sec">
-                                        <div class="image-hover img-layer-slide-left-right">
-                                            <img src="{{ asset('img/clinica/team-member2.jpg') }}" alt="hthtfh">
-                                            <div class="layer">
-                                                <a href="#."><i class="fa fa-facebook"></i></a>
-                                                <a href="#."><i class="fa fa-twitter"></i></a>
-                                                <a href="#."><i class="fa fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="detail">
-                                        <h6>Dr. Sara Stefon</h6>
-                                        <span>Cardiologist</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Donec nec eros eget nisl fringilla commodo.
-                                        </p>
-                                        <a href="team-member-detail.html">- View Profile</a>
-                                    </div>
-                                </div>
-                                <div class="post item">
-                                    <div class="gallery-sec">
-                                        <div class="image-hover img-layer-slide-left-right">
-                                            <img src="{{ asset('img/clinica/team-member3.jpg') }}" alt="fsr">
-                                            <div class="layer">
-                                                <a href="#."><i class="fa fa-facebook"></i></a>
-                                                <a href="#."><i class="fa fa-twitter"></i></a>
-                                                <a href="#."><i class="fa fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="detail">
-                                        <h6>Dr. Wahab Apple</h6>
-                                        <span>Heart Specialist</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Donec nec eros eget nisl fringilla commodo.
-                                        </p>
-                                        <a href="team-member-detail.html">- View Profile</a>
-                                    </div>
-                                </div>
-
-                                <div class="post item">
-                                    <div class="gallery-sec">
-                                        <div class="image-hover img-layer-slide-left-right">
-                                            <img src="{{ asset('img/clinica/team-member4.jpg') }}" alt="bfbff">
-                                            <div class="layer">
-                                                <a href="#."><i class="fa fa-facebook"></i></a>
-                                                <a href="#."><i class="fa fa-twitter"></i></a>
-                                                <a href="#."><i class="fa fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="detail">
-                                        <h6>Dr. Mecan smith</h6>
-                                        <span>Heart Specialist</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Donec nec eros eget nisl fringilla commodo.
-                                        </p>
-                                        <a href="team-member-detail.html">- View Profile</a>
-                                    </div>
-                                </div>
-
-                                <div class="post item">
-                                    <div class="gallery-sec">
-                                        <div class="image-hover img-layer-slide-left-right">
-                                            <img src="{{ asset('img/clinica/team-member5.jpg') }}" alt="ddfd">
-                                            <div class="layer">
-                                                <a href="#."><i class="fa fa-facebook"></i></a>
-                                                <a href="#."><i class="fa fa-twitter"></i></a>
-                                                <a href="#."><i class="fa fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="detail">
-                                        <h6>Dr. Jack Bravo</h6>
-                                        <span>Heart Specialist</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Donec nec eros eget nisl fringilla commodo.
-                                        </p>
-                                        <a href="team-member-detail.html">- View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--End Specialists-->
 
     <!--Start Doctor Quote-->
@@ -540,8 +356,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="quote">"Meeting the challenges of an ever-changing healthcare
-                        environment."</span>
+                    <span class="quote">"Afrontar los desafíos de un entorno sanitario en constante cambio."</span>
                     <span class="name">- Dr. Jonathan Gobi</span>
                 </div>
             </div>
@@ -555,97 +370,36 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="main-title">
-                        <h2><span>Latest News from</span> Medical guide</h2>
+                        <h2><span>Revisa nuestra noticias</span> Recientes </h2>
                         <p>
-                            If you need a doctor for to consectetuer Lorem ipsum dolor,
-                            consectetur adipiscing elit. Ut volutpat eros adipiscing
-                            nonummy.
+                            Como centro de salud nosotros compartimos con ustedes sobre
+                            las actividades que realiamos como campañas médicas, capacitaciones,
+                            labores sociales y más contenido.
                         </p>
                     </div>
                 </div>
             </div>
-
             <div id="latest-news">
                 <div class="container">
                     <div class="row">
                         <div class="span12">
                             <div id="owl-demo" class="owl-carousel">
+                                @foreach($noticias as $noticia)
                                 <div class="post item">
-                                    <img class="lazyOwl" src="{{ asset('img/clinica/news-img1.jpg') }}" alt="grhg">
+                                    <img class="lazyOwl" src="{{ asset($noticia->imagen) }}" alt="rerer">
                                     <div class="detail">
-                                        <img src="{{ asset('img/clinica/news-dr1.jpg') }}" alt="gggg">
+                                        <img src="{{ asset('img/clinica/news-dr1.jpg') }}" alt="yuyu">
                                         <h4>
-                                            <a href="news-detail.html">Center for Medical</a>
+                                            <a href="{{ url ('noticias/noticias-nuevas/'.$noticia->slug) }}">{{ $noticia->titulo }}</a>
                                         </h4>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit eros...
+                                            {{ $noticia->descripcion }}
                                         </p>
-                                        <span><i class="fa fa-clock-o"></i> Apr 22, 2016</span>
-                                        <span class="comment"><a href="news-detail.html"><i class="fa fa-comment"></i> 5 Comments</a></span>
+                                        <span><i class="icon-clock3"></i> {{ $noticia->created_at }}</span>
+                                        <span class="comment"><a href="{{ url ('noticias/noticias-nuevas/'.$noticia->slug) }}"><i class="icon-icons206"></i> 3 Comments</a></span>
                                     </div>
                                 </div>
-                                <div class="post item">
-                                    <img class="lazyOwl" src="{{ asset('img/clinica/news-img2.jpg') }}" alt="rerer">
-                                    <div class="detail">
-                                        <img src="{{ asset('img/clinica/news-dr2.jpg') }}" alt="yuyu">
-                                        <h4>
-                                            <a href="news-detail.html">Laboratory Tests</a>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit eros...
-                                        </p>
-                                        <span><i class="icon-clock3"></i> Apr 09, 2016</span>
-                                        <span class="comment"><a href="news-detail.html"><i class="icon-icons206"></i> 3 Comments</a></span>
-                                    </div>
-                                </div>
-
-                                <div class="post item">
-                                    <img class="lazyOwl" src="{{ asset('img/clinica/news-img3.jpg') }}" alt="oio">
-                                    <div class="detail">
-                                        <img src="{{ asset('img/clinica/news-dr1.jpg') }}" alt="oit">
-                                        <h4>
-                                            <a href="news-detail.html">Research Center</a>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit eros...
-                                        </p>
-                                        <span><i class="icon-clock3"></i> Mar 28, 2016</span>
-                                        <span class="comment"><a href="news-detail.html"><i class="icon-icons206"></i> 0 Comments</a></span>
-                                    </div>
-                                </div>
-
-                                <div class="post item">
-                                    <img class="lazyOwl" src="{{ asset('img/clinica/news-img4.jpg') }}" alt="grgr">
-                                    <div class="detail">
-                                        <img src="{{ asset('img/clinica/news-dr2.jpg') }}" alt="grgggg">
-                                        <h4><a href="news-detail.html">Child Birth</a></h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit eros...
-                                        </p>
-                                        <span><i class="icon-clock3"></i> Mar 15, 2016</span>
-                                        <span class="comment"><a href="news-detail.html"><i class="icon-icons206"></i> 0 Comments</a></span>
-                                    </div>
-                                </div>
-
-                                <div class="post item">
-                                    <img class="lazyOwl" src="{{ asset('img/clinica/news-img5.jpg') }}" alt="eeew">
-                                    <div class="detail">
-                                        <img src="{{ asset('img/clinica/news-dr2.jpg') }}" alt="grgrgee">
-                                        <h4>
-                                            <a href="news-detail.html">Special Treatment</a>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit eros...
-                                        </p>
-                                        <span><i class="icon-clock3"></i> Mar 04, 2016</span>
-                                        <span class="comment"><a href="news-detail.html"><i class="icon-icons206"></i> 11 Comments</a></span>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -661,7 +415,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="main-title main-title2">
-                        <h2><span>What Our Patients Say</span> About Us</h2>
+                        <h2><span>Lo que nuestros pacientes</span> comentas sobre nosotros</h2>
                     </div>
                 </div>
             </div>
@@ -675,50 +429,11 @@
                                     <div class="testi-sec">
                                         <img src="{{ asset('img/clinica/testimonial-img1.jpg') }}" alt="tyytjk">
                                         <div class="height10"></div>
-                                        <span class="name">Elebana Front</span>
-                                        <span class="patient">Heart Patient</span>
+                                        <span class="name">Eliana Gimenez</span>
+                                        <span class="patient">Paciente</span>
                                         <div class="height30"></div>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                            elit, sed diam nonummy nibh euismod tincidunt ut
-                                            laoreet dolore magna aliquam erat volutpat. vitae
-                                            felis pretium, euismod ipsum nec, placerat turpis.
-                                            Aenean eu gravida arcu, et consectetur orci Quisque
-                                            posuere dolor in malesuada fermentum.
-                                        </p>
-                                        <div class="height35"></div>
-                                    </div>
-                                    <div class="testi-sec">
-                                        <img src="{{ asset('img/clinica/testimonial-img2.jpg') }}" alt="rety">
-                                        <div class="height10"></div>
-                                        <span class="name">Johny Bravo</span>
-                                        <span class="patient">Hair Patient</span>
-                                        <div class="height30"></div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                            elit, sed diam nonummy nibh euismod tincidunt ut
-                                            laoreet dolore magna aliquam erat volutpat. vitae
-                                            felis pretium, euismod ipsum nec, placerat turpis.
-                                            Aenean eu gravida arcu, et consectetur Quisque
-                                            posuere dolor in malesuada fermentum sed diam
-                                            nonummy nibh euismod tincidunt ut laoreet dolore
-                                            magna aliquam erat volutpat.
-                                        </p>
-                                    </div>
-                                    <div class="testi-sec">
-                                        <img src="{{ asset('img/clinica/testimonial-img3.jpg') }}" alt="oipp">
-                                        <div class="height10"></div>
-                                        <span class="name">Rubica Noi</span>
-                                        <span class="patient">Skin Patient</span>
-                                        <div class="height30"></div>
-
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                            elit, sed diam nonummy nibh euismod tincidunt ut
-                                            laoreet dolore magna aliquam erat volutpat. vitae
-                                            felis pretium, euismod ipsum nec, placerat turpis.
-                                            Aenean eu gravida arcu, et consectetur orci Quisque
-                                            posuere dolor in malesuada fermentum.
+                                        Me siento increíblemente agradecido por el excepcional equipo médico en este centro de salud. Desde el primer día, me sentí escuchado, comprendido y bien cuidado. Recomiendo encarecidamente este centro a cualquiera que busque atención médica de primera calidad con un toque humano.
                                         </p>
                                         <div class="height35"></div>
                                     </div>

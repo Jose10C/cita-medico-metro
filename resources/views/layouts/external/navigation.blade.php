@@ -1,14 +1,3 @@
-<!--Start PreLoader-->
-<!-- <div id="preloader">
-            <div id="status">&nbsp;</div>
-            <div class="loader">
-                <p>Cargando...</p>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div> -->
-<!--End PreLoader-->
 <!--Start Cabecera-->
 <div id="header-1">
     <!--Start Top Bar-->
@@ -16,13 +5,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <span> <i class="fa fa-home"></i> Av. Diaz Varcenas 293 - Abancay</span>
+                    <span> <i class="fa fa-home"></i> Jr. Huancavelica - Abancay</span>
                 </div>
                 <div class="col-md-7">
                     <div class="get-touch">
                         <ul>
                             <li>
-                                <a><i class="fa fa-phone"></i> (084)445-323</a>
+                                <a><i class="fa fa-phone"></i> (083)-322-312</a>
                             </li>
                             <li>
                                 <a href="#."><i class="fa fa-envelope"></i> contactos@metropolitano.com</a>
@@ -67,77 +56,18 @@
                 <div class="col-md-9">
                     <nav class="menu-2">
                         <ul class="nav wtf-menu">
-                            <li class="item-select parent"><a href="/">Inicio</a></li>
-                            <li class="parent">
-                                <a href="#.">Nosotros</a>
-                                <ul class="submenu">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="about-us2.html">About Us 2</a></li>
-                                </ul>
+                            <li class="{{ request()->routeIs('lista.medicos') ? 'item-select' : '' }} parent"><a href="/">Inicio</a></li>
+                            <li class="{{ request()->routeIs('nosotros.index') ? 'item-select' : '' }} parent">
+                                <a href="{{ route('nosotros.index') }}">Nosotros</a>
                             </li>
-                            <li class="parent">
-                                <a href="#.">Procesos</a>
-                                <ul class="submenu">
-                                    <li class="select-menu">
-                                        <a href="index.html">Home Page 1</a>
-                                    </li>
-                                    <li><a href="index2.html">Home Page 2</a></li>
-                                    <li><a href="index3.html">Home Page 3</a></li>
-                                    <li><a href="index4.html">Home Page 4</a></li>
-                                </ul>
+                            <li class="{{ request()->routeIs('all.noticias') ? 'item-select' : '' }} parent">
+                                <a href="{{ route('all.noticias') }}">Noticias</a>
                             </li>
-                            <!-- <li class="parent">
-                                <a href="#.">Galería</a>
-                                <ul class="submenu">
-                                    <li class="parent">
-                                        <a href="#">Simple Gallery</a>
-                                        <i class="icon-chevron-small-right"></i>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="gallery-simple-two.html">Columns Two</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery-simple-three.html">Columns Three</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery-simple-four.html">Columns Four</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="parent">
-                                        <a href="#">Nimble Gallery</a>
-                                        <i class="icon-chevron-small-right"></i>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="gallery-nimble-two.html">Columns Two</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery-nimble-three.html">Columns Three</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery-nimble-four.html">Columns Four</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li> -->
-                            <li class="parent">
-                                <a href="#.">Novedades</a>
-                                <ul class="submenu">
-                                    <li><a href="news-sidebar.html">Sidebar</a></li>
-                                    <li><a href="news-text.html">Text-Based</a></li>
-                                    <li><a href="news-single.html">Single Post</a></li>
-                                    <li><a href="news-double.html">Double Post</a></li>
-                                    <li><a href="news-masonary.html">Masonary</a></li>
-                                </ul>
+                            <li class="{{ request()->routeIs('servicios.index') ? 'item-select' : '' }} parent">
+                                <a href="{{ route('servicios.index') }}">Servicios</a>
                             </li>
-                            <li><a href="shop.html">Servicios</a></li>
-                            <li class="parent">
-                                <a href="#.">Contáctanos</a>
-                                <ul class="submenu">
-                                    <li><a href="contact-us.html">Contact-Us One</a></li>
-                                    <li><a href="contact-us2.html">Contact-Us Two</a></li>
-                                </ul>
+                            <li class="{{ request()->routeIs('contact.index') ? 'item-select' : '' }} parent">
+                                <a href="{{ route('contact.index')}}">Contáctanos</a>
                             </li>
                             @if (Route::has('login'))
                             @auth
